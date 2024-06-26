@@ -3,7 +3,7 @@
   <ol>
     <li><a href="#starting-the-project">Starting the project</a>
     </li>
-    <li><a href="transfer-the-project-to-typescript">Transfer the project to TypeScript</a>
+    <li><a href="#transfer-the-project-to-typescript">Transfer the project to TypeScript</a>
     </li>
     <li><a href="#create-a-list-component">Create a List Component</a>
     </li>
