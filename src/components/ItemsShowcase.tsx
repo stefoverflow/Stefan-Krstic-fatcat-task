@@ -1,10 +1,10 @@
-export interface ItemShowcaseProps {
+export interface ItemShowcase {
     title: string;
     description: string;
 }
 
 export interface ItemsShowcaseProps {
-    items: ItemShowcaseProps[];
+    items: ItemShowcase[];
 }
 
 export const ItemsShowcase = ({ items }: ItemsShowcaseProps) => {

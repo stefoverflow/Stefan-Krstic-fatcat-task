@@ -1,11 +1,12 @@
-// import clsx from 'clsx';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { TextField } from '@mui/material';
 import axios from 'axios';
+import clsx from 'clsx';
 import { z } from 'zod';
 
 import { GenericForm } from '@homework-task/components/GenericForm';
 import { PageContainer } from '@homework-task/components/PageContainer';
+import { EmailForm } from '@homework-task/models/Email';
 
 const EmailSchema = z.object({
     title: z
@@ -18,15 +19,8 @@ const EmailSchema = z.object({
         .max(200, { message: 'Body is required to 200 characters!' }),
 });
 
-interface EmailForm {
-    title: string;
-    body: string;
-}
-
-type EmailSchemaType = z.infer<typeof EmailSchema>;
-
 export const Form = () => {
-    const sendEmail = async (data: EmailSchemaType): Promise<void> =>
+    const sendEmail = async (data: EmailForm): Promise<void> =>
         axios.post('https://jsonplaceholder.typicode.com/posts', data);
 
     return (
@@ -37,6 +31,15 @@ export const Form = () => {
                 successMessage="Successfully sent email!"
                 renderForm={(register, errors, isPending) => (
                     <>
+                        <div
+                            className={clsx(
+                                'text-2xl',
+                                'text-center',
+                                'font-bold'
+                            )}
+                        >
+                            Send email
+                        </div>
                         <TextField
                             margin="normal"
                             required

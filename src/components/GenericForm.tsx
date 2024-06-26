@@ -1,6 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Alert } from '@mui/material';
-import { useMutation as useReactQueryMutation } from '@tanstack/react-query';
+import { useMutation } from '@tanstack/react-query';
 import clsx from 'clsx';
 import {
     FieldErrors,
@@ -33,8 +33,9 @@ export const GenericForm = <T extends FieldValues>({
         handleSubmit,
         formState: { errors },
     } = useForm<T>({ resolver: resolver });
-    const { mutate, isPending, isError, error, isSuccess } =
-        useReactQueryMutation({ mutationFn: mutationFn });
+    const { mutate, isPending, isError, error, isSuccess } = useMutation({
+        mutationFn: mutationFn,
+    });
 
     const handleFormSubmit = handleSubmit((data) => mutate(data));
 
@@ -48,7 +49,7 @@ export const GenericForm = <T extends FieldValues>({
                 'rounded-2xl',
                 'justify-center',
                 'p-8',
-                'sm:m-16'
+                'sm:mx-16'
             )}
             onSubmit={(e) => {
                 e.preventDefault();

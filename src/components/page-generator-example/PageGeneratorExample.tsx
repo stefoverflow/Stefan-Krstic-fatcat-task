@@ -108,6 +108,7 @@ export const PageGeneratorExample = () => {
         ],
     };
 
+    // inner components can also have components but must be able to display children
     const data = [
         {
             type: REGISTRY.layoutSection,
@@ -124,9 +125,6 @@ export const PageGeneratorExample = () => {
                 {
                     type: REGISTRY.itemsShowcase,
                     props: itemsShowcaseProps,
-                    // components: [
-                    // only working for one nesting... need to debug!
-                    // ],
                 },
                 {
                     type: REGISTRY.componentCards,
@@ -135,8 +133,14 @@ export const PageGeneratorExample = () => {
             ],
         },
         {
-            type: REGISTRY.componentTrustBar,
-            props: trustbarProps,
+            type: REGISTRY.layoutSection,
+            props: layoutProps,
+            components: [
+                {
+                    type: REGISTRY.componentTrustBar,
+                    props: trustbarProps,
+                },
+            ],
         },
     ];
 

@@ -36,7 +36,7 @@ const componentRegistry: ComponentRegistry = {
     // add components for generator
 };
 
-// Recursive rendering function
+// recursive rendering function
 const renderComponent = (component: ComponentData) => {
     const { type, props, components } = component;
     const Component = componentRegistry[type];
@@ -52,7 +52,6 @@ const renderComponent = (component: ComponentData) => {
     );
 };
 
-// PageGenerator Component
 export const PageGenerator = ({ data }: PageGeneratorProps) => {
     return <div>{data.map(renderComponent)}</div>;
 };

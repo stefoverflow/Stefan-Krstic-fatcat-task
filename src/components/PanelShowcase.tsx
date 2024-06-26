@@ -1,13 +1,13 @@
 import clsx from 'clsx';
 
-export interface PanelShowcaseItemProps {
+export interface PanelShowcaseItem {
     title: string;
     description: string;
     image: string;
 }
 
 export interface PanelShowcaseProps {
-    items: PanelShowcaseItemProps[];
+    items: PanelShowcaseItem[];
 }
 
 export const PanelShowcase = ({ items }: PanelShowcaseProps) => {

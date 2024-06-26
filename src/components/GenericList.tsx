@@ -32,32 +32,33 @@ export const GenericList = <T,>({
             </div>
         );
 
-    return isLoading ? (
-        <div className={clsx('flex', 'flex-col', 'gap-16')}>
-            {Array.from({ length: 5 }).map((_, i) => (
-                <Skeleton key={i} variant="rectangular" height={70} />
-            ))}
-        </div>
-    ) : (
-        data.map((x, i) => (
-            <div
-                className={clsx(
-                    'flex',
-                    'flex-row',
-                    'flex-wrap',
-                    'gap-4',
-                    'p-4',
-                    'even:bg-disabled',
-                    'odd:bg-white',
-                    'py-6',
-                    'px-4',
-                    'first:rounded-t-2xl',
-                    'last:rounded-b-2xl'
-                )}
-                key={i}
-            >
-                {renderItem(x)}
+    if (isLoading)
+        return (
+            <div className={clsx('flex', 'flex-col', 'gap-16')}>
+                {Array.from({ length: 5 }).map((_, i) => (
+                    <Skeleton key={i} variant="rectangular" height={70} />
+                ))}
             </div>
-        ))
-    );
+        );
+
+    return data.map((x, i) => (
+        <div
+            className={clsx(
+                'flex',
+                'flex-row',
+                'flex-wrap',
+                'gap-4',
+                'p-4',
+                'even:bg-disabled',
+                'odd:bg-white',
+                'py-6',
+                'px-4',
+                'first:rounded-t-2xl',
+                'last:rounded-b-2xl'
+            )}
+            key={i}
+        >
+            {renderItem(x)}
+        </div>
+    ));
 };
