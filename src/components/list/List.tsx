@@ -7,21 +7,8 @@ import { GenericList } from '../GenericList';
 
 export const List = () => {
     const renderItem = (user: User) => (
-        <div
-            key={user.id}
-            className={clsx(
-                'flex',
-                'flex-row',
-                'flex-wrap',
-                'gap-4',
-                'p-4',
-                'bg-white',
-                'py-6',
-                'px-4',
-                'rounded-2xl'
-            )}
-        >
-            <div className={clsx('text-black', 'flex-1', 'text-l')}>
+        <>
+            <div className={clsx('text-black', 'flex-none', 'text-l')}>
                 {user.id}
             </div>
             <div className={clsx('text-black', 'flex-1', 'text-l')}>
@@ -36,7 +23,7 @@ export const List = () => {
             <div className={clsx('text-black', 'flex-1', 'text-l')}>
                 {user.phone}
             </div>
-        </div>
+        </>
     );
 
     return (
