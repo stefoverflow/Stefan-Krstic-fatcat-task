@@ -1,8 +1,12 @@
 import React from 'react';
 
+import { Cards } from '@homework-task/components/Cards';
 import { Hero } from '@homework-task/components/Hero';
+import { ItemsShowcase } from '@homework-task/components/ItemsShowcase';
 import { Layout } from '@homework-task/components/Layout';
+import { PanelShowcase } from '@homework-task/components/PanelShowcase';
 import { TrustBar } from '@homework-task/components/TrustBar';
+import { REGISTRY } from '@homework-task/constants/registry';
 
 interface ComponentProps {
     [key: string]: unknown;
@@ -23,9 +27,13 @@ interface ComponentRegistry {
 }
 
 const componentRegistry: ComponentRegistry = {
-    componentHero: Hero,
-    componentTrustBar: TrustBar,
-    layoutSection: Layout,
+    [REGISTRY.componentHero]: Hero,
+    [REGISTRY.componentTrustBar]: TrustBar,
+    [REGISTRY.layoutSection]: Layout,
+    [REGISTRY.itemsShowcase]: ItemsShowcase,
+    [REGISTRY.panelShowcase]: PanelShowcase,
+    [REGISTRY.componentCards]: Cards,
+    // add components for generator
 };
 
 // Recursive rendering function

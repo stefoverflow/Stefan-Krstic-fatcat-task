@@ -6,7 +6,7 @@ export interface TrustBarProps {
 
 export const TrustBar = ({ images }: TrustBarProps) => {
     return (
-        <Marquee direction="down">
+        <Marquee direction="right">
             {images.map((image) => (
                 <img width={100} key={image} src={image} className="mx-10" />
             ))}
