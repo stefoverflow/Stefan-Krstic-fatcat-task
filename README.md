@@ -21,7 +21,7 @@ Project can be started with the following command:
     npm run start
   ```
 
-## Task 1: Transfer the project to TypeScript
+## Transfer the project to TypeScript
 
 ```
   Your first task involves transitioning this project from JavaScript to TypeScript. To ensure
@@ -39,7 +39,7 @@ Project can be started with the following command:
 
 For this task i added a `tsconfig.json` file and in each component that existed in the project I added appropriate types and changed extension from `.jsx` to `.tsx`. I also added a path configuration into `tsconfig.json` and into `vite.config.js` and also in `.eslintrc.cjs`.
 
-## Task 2: Create a List Component
+## Create a List Component
 
 ```
   Develop a React component that is both scalable and reusable, designed to fetch and
@@ -51,7 +51,7 @@ For this task i added a `tsconfig.json` file and in each component that existed 
 I created a [GenericList](src/components/GenericList.tsx) component which is a generic component. It receives a `queryKey`, `apiUrl` for list fetching and also a CallBack function `renderItem` to render each item of the list. In that component I added a skeleton loader and also error handling.
 Example of usage is [List](src/pages/List.tsx) in which I pass the correct link that is in the assignment description and with correct type that is covering all keys that needs to be displayed.
 
-## Task 3: Create a Form Generator Component
+## Create a Form Generator Component
 
 ```
   1. Develop a scalable and reusable React component with the following capabilities:
@@ -75,7 +75,7 @@ Example of usage is [List](src/pages/List.tsx) in which I pass the correct link 
 I created a [GenericForm](src/components/GenericForm.tsx) component which is a generic component too. I used all the libraries recommended for the task. The component is receiving validation schema, mutation function and CallBack function for rendering fields. Component is handling errors as well as successfull mutations. I also considered to disable fields and submitting when there is already a request in progress. 
 Example of usage is [Form](src/pages/Form.tsx) in which I generate Schema, mutation function and there I am using a CallBack function as in example of the assignment in order to display fields.  
 
-## Task 4: Create a Page Generator Component
+## Create a Page Generator Component
 
 ```
   Your task is to create a reusable React component for building web pages. This
