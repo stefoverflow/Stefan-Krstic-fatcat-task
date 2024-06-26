@@ -1,9 +1,8 @@
 import clsx from 'clsx';
 
+import { GenericList } from '@homework-task/components/GenericList';
 import { PageContainer } from '@homework-task/components/PageContainer';
 import { User } from '@homework-task/models/User';
-
-import { GenericList } from '../GenericList';
 
 export const List = () => {
     const renderItem = (user: User) => (

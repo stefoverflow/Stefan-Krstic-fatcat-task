@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { Card } from '@homework-task/components/landing/Card';
+import { Card } from '@homework-task/pages/landing/Card';
 import { ROUTES } from '@homework-task/routes';
 
 const vscodeProjectLink = `#`;

@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Form } from '@homework-task/components/form/Form';
-import { Landing } from '@homework-task/components/landing/Landing';
-import { List } from '@homework-task/components/list/List';
-import { PageGeneratorExample } from '@homework-task/components/page-generator-example/PageGeneratorExample';
+import { Form } from '@homework-task/pages/Form';
+import { Landing } from '@homework-task/pages/landing/Landing';
+import { List } from '@homework-task/pages/List';
+import { PageGeneratorExample } from '@homework-task/pages/SimplePage';
 import { ROUTES } from '@homework-task/routes';
 
 export const router = createBrowserRouter([
