@@ -1,15 +1,15 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#starting-the-project">Starting the project></a>
+    <li><a href="#starting-the-project">Starting the project</a>
     </li>
-    <li><a href="#task-1:-transfer-the-project-to-typescript">Task 1: Transfer the project to TypeScript</a>
+    <li><a href="transfer-the-project-to-typescript">Transfer the project to TypeScript</a>
     </li>
-    <li><a href="#task2">Task 2: Create a List Component</a>
+    <li><a href="#create-a-list-component">Create a List Component</a>
     </li>
-    <li><a href="#task3">Task 3: Create a Form Generator Component</a>
+    <li><a href="#create-a-form-generator-component">Create a Form Generator Component</a>
     </li>
-    <li><a href="#task4">Task 4: Create a Page Generator Component</a>
+    <li><a href="#create-a-page-generator-component">Create a Page Generator Component</a>
     </li>
   </ol>
 </details>
