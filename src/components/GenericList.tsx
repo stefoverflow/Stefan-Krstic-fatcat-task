@@ -54,7 +54,8 @@ export const GenericList = <T,>({
                 'py-6',
                 'px-4',
                 'first:rounded-t-2xl',
-                'last:rounded-b-2xl'
+                'last:rounded-b-2xl',
+                'overflow-x-auto'
             )}
             key={i}
         >

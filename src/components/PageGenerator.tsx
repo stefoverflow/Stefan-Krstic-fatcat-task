@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Cards } from '@homework-task/components/Cards';
 import { Hero } from '@homework-task/components/Hero';
 import { ItemsShowcase } from '@homework-task/components/ItemsShowcase';
@@ -46,12 +44,12 @@ const renderComponent = (component: ComponentData) => {
     }
 
     return (
-        <Component {...props}>
+        <Component {...props} key={type.toString() + components?.toString()}>
             {components && components.map(renderComponent)}
         </Component>
     );
 };
 
 export const PageGenerator = ({ data }: PageGeneratorProps) => {
-    return <div>{data.map(renderComponent)}</div>;
+    return data.map(renderComponent);
 };
