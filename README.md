@@ -1,9 +1,9 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#starting">Starting the project></a>
+    <li><a href="#starting-the-project">Starting the project></a>
     </li>
-    <li><a href="#task1">Task 1: Transfer the project to TypeScript</a>
+    <li><a href="#task-1:-transfer-the-project-to-typescript">Task 1: Transfer the project to TypeScript</a>
     </li>
     <li><a href="#task2">Task 2: Create a List Component</a>
     </li>
